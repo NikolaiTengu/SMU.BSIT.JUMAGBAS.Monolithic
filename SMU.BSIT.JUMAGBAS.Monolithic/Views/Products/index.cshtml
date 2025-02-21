@@ -2,27 +2,44 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-@model Product
+@model ProductsViewModel
 @{
     ViewData["Title"] = "Products";
 }
 
 
-
+<div>
 <form method="post"  asp-action="SubmitProduct" asp-controller="Products">
     <div style="display:inline-grid">
         <label for="product_name">Product:</label>
-        <input id="product_name" asp-for="Name" type="text" />
+        <input id="product_name" asp-for="@Model.Product.Name" type="text" />
 
 
         <label for="product_type">Type:</label>
-        <input id="product_type" asp-for="Type" type="text" />
+        <input id="product_type" asp-for="@Model.Product.Type" type="text" />
 
 
         <label for="product_manufacturer">Manufacturer:</label>
-        <input id="product_manufacturer" asp-for="Manufacturer" type="text" />
+        <input id="product_manufacturer" asp-for="@Model.Product.Manufacturer" type="text" />
 
         <button style="margin-top:10px;" type="submit">Submit</button>
 
     </div>
+
+
 </form>
+
+	@if (!string.IsNullOrEmpty(ViewBag.ProductId))
+	{
+		<p>Product submitted successfully! ID: @ViewBag.ProductId</p>
+	
+
+<h2>Products</h2>
+@foreach(var product in Model?.ProductsList)
+  {
+    <a href="/products/details/@product.Id">@product.Id | @product.Name | @product.Type</a>
+   <hr />
+  }
+}
+    })
+</div>

@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMU.BSIT.JUMAGBAS.Monolithic", "SMU.BSIT.JUMAGBAS.Monolithic\SMU.BSIT.JUMAGBAS.Monolithic.csproj", "{CFEAD350-45D0-40E6-AE91-5FCD9E56DDE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMU.BSIT.Jumagbas.Monolithic.ProductsDAL", "SMU.BSIT.Jumagbas.Monolithic.ProductsDAL\SMU.BSIT.Jumagbas.Monolithic.ProductsDAL.csproj", "{DBEA6D34-22E3-433B-BE35-DF74911EF5DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMU.BSIT.Jumagbas.Monolithic.ProductsBLL", "SMU.BSIT.Jumagbas.Monolithic.ProductsBLL\SMU.BSIT.Jumagbas.Monolithic.ProductsBLL.csproj", "{93359F88-A4EA-4A94-B63E-51F84C6C0E47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CFEAD350-45D0-40E6-AE91-5FCD9E56DDE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFEAD350-45D0-40E6-AE91-5FCD9E56DDE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFEAD350-45D0-40E6-AE91-5FCD9E56DDE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBEA6D34-22E3-433B-BE35-DF74911EF5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEA6D34-22E3-433B-BE35-DF74911EF5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEA6D34-22E3-433B-BE35-DF74911EF5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEA6D34-22E3-433B-BE35-DF74911EF5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93359F88-A4EA-4A94-B63E-51F84C6C0E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93359F88-A4EA-4A94-B63E-51F84C6C0E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93359F88-A4EA-4A94-B63E-51F84C6C0E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93359F88-A4EA-4A94-B63E-51F84C6C0E47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

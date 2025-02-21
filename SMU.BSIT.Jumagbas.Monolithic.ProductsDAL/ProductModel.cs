@@ -1,8 +1,9 @@
-﻿using SQLite;
+﻿
+using SQLite;
 
-namespace SMU.BSIT.JUMAGBAS.Monolithic.Models
+namespace SMU.BSIT.Jumagbas.Monolithic.ProductsDAL
 {
-    public class Product
+    public class ProductModel
     {
         [PrimaryKey, AutoIncrement]
 

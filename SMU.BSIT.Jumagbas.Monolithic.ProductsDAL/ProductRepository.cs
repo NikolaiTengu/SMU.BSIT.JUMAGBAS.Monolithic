@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using SMU.BSIT.JUMAGBAS.Monolithic.Models;
-using SQLite;
+﻿using SQLite;
 
-
-namespace SMU.BSIT.JUMAGBAS.Monolithic.Services
+namespace SMU.BSIT.Jumagbas.Monolithic.ProductsDAL
 {
-    public class ProductsService
+    public class ProductRepositorys
     {
         private string dbPath =>
             Path.Combine(Environment.GetFolderPath(
@@ -13,23 +10,23 @@ namespace SMU.BSIT.JUMAGBAS.Monolithic.Services
             "Products.db");
         private readonly ISQLiteConnection db;
 
-        public ProductsService()
+        public ProductRepository()
         {
             db = new SQLiteConnection(dbPath);
-            db.CreateTable<Product>();
+            db.CreateTable<ProductModel>();
         }
 
-        public void AddProduct(Product product)
+        public void AddProduct(ProductModel product)
         {
             db.Insert(product);
         }
 
-        public IEnumerable<Product> GetProducts()
+        public IEnumerable<ProductModel> GetProducts()
         {
-            return db.Table<Product>();
+            return db.Table<ProductModel>();
         }
 
-        public Product GetProduct(int id)
+        public ProductModel GetProduct(int id)
         {
             try
             {
@@ -41,7 +38,5 @@ namespace SMU.BSIT.JUMAGBAS.Monolithic.Services
                 return null;
             }
         }
-
-       
     }
 }

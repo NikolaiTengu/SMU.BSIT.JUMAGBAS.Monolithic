@@ -19,15 +19,26 @@ namespace SMU.BSIT.JUMAGBAS.Monolithic.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var viewModel = new ProductsViewModel();
+
+            var products = _productsService.GetProducts();
+            viewModel.ProductsList = products;
+
+            ViewBag.ProductId = TempData["ProductId"]?.ToString();
+            return View(viewModel);
         }
 
         public IActionResult SubmitProduct(Product product)
         {
             _productsService.AddProduct(product);
+            TempData["ProductId"] = product.Id;
             return RedirectToAction("Index");
         }
-
+        public IActionResult Details([FromQuery] int id)
+        {
+            var product = _productsService.GetProduct(id);
+            return View(product);
+        }
     }
 
 }

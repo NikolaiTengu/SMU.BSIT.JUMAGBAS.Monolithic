@@ -1,11 +1,9 @@
-﻿using SQLite;
+﻿
 
-namespace SMU.BSIT.JUMAGBAS.Monolithic.Models
+namespace SMU.BSIT.Jumagbas.Monolithic.ProductsBLL
 {
-    public class Product
+    public class ProductDTO
     {
-        [PrimaryKey, AutoIncrement]
-
         public int Id { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
